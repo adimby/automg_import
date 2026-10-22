@@ -147,7 +147,7 @@ export default function App() {
               <label className="field">Carburant<select value={form.fuel} onChange={e=>update('fuel',e.target.value)}>{['Diesel','Essence','Hybride','Électrique','Autre'].map(f=><option key={f}>{f}</option>)}</select></label>
             </div>
             <div className="grid two">
-              <label className="field">État<select value="used" onChange={()=>{}}><option value="used">Occasion</option><option value="new">Neuf</option></select></label>
+              <label className="field">État<select defaultValue="used"><option value="used">Occasion</option><option value="new">Neuf</option></select></label>
               <label className="field">Places (chauffeur inclus)<select value={form.seats} onChange={e=>update('seats',Number(e.target.value))}>{[5,7,9,11,12,16,22].map(n=><option key={n} value={n}>{n===22?'22+':n}</option>)}</select></label>
             </div>
             <div className="hs-box">
